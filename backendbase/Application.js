@@ -8,20 +8,20 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 app.use((req, res, next) => {
-    res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
-    res.setHeader('Pragma', 'no-cache');
-    res.setHeader('Expires', '0');
-    next();
+  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+  res.setHeader('Pragma', 'no-cache');
+  res.setHeader('Expires', '0');
+  next();
 });
 
 app.get("/Action", (request, response) => {
-    const q        = url.parse(request.url, true).query;
-    const id       = q.id       || '(no proporcionado)';
-    const password = q.password || '(no proporcionado)';
-    const nombre   = q.nombre   || '(no proporcionado)';
-    const boleta   = q.boleta   || '(no proporcionado)';
+  const q = url.parse(request.url, true).query;
+  const id = q.id || '(no proporcionado)';
+  const password = q.password || '(no proporcionado)';
+  const nombre = q.nombre || '(no proporcionado)';
+  const boleta = q.boleta || '(no proporcionado)';
 
-    const html = `<!DOCTYPE html>
+  const html = `<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -47,7 +47,7 @@ app.get("/Action", (request, response) => {
 <body>
   <div class="container">
     <h1>Datos Recibidos por el Servidor</h1>
-    <p>El servidor Express proceso correctamente la solicitud enviada desde el formulario React.</p>
+    <p>Solicitud procesada correctamente.</p>
 
     <!-- TABLE -->
     <section>
@@ -87,13 +87,15 @@ Boleta:     ${boleta}</pre>
 
     <!-- OL -->
     <section>
-      <h2>Pasos del Procesamiento (ol)</h2>
-      <ol>
-        <li>El cliente envio el formulario via GET desde el Front-End React.</li>
-        <li>Express recibio la peticion HTTP en la ruta /Action.</li>
-        <li>Se extrajeron los parametros de la query string con el modulo url.</li>
-        <li>Se genero esta pagina HTML dinamica y se respondio con response.send().</li>
-      </ol>
+      <h2>Partidos en CDMX y Clases en Línea</h2>
+        <ol>
+          <li>11 de junio: Partido Inaugural (México) - Clases en línea por operativo vial</li>
+          <li>17 de junio: Partido de Fase de Grupos - Clases normales en la escuela</li>
+          <li>24 de junio: Tercer Partido de México - Clases en línea por tráfico pesado</li>
+          <li>30 de junio: Partido de Dieciseisavos de Final - Clases en línea (Cierre de mes)</li>
+          <li>03 de julio: Partido de Octavos de Final - Clases normales en la escuela</li>
+        </ol>
+
     </section>
 
     <!-- IMG -->
@@ -142,21 +144,21 @@ Boleta:     ${boleta}</pre>
 
     <!-- CANVAS -->
     <section>
-      <h2>Confirmacion Visual (canvas)</h2>
-      <canvas id="cvConfirm" width="380" height="90"
-              style="border:1px solid #aaa; display:block;"></canvas>
+      <h2>Confirmación Visual</h2>
+      <canvas id="cvConfirm" width="380" height="70" style="border:1px solid #aaa; display:block;"></canvas>
       <script>
         (function () {
           var c   = document.getElementById('cvConfirm');
           var ctx = c.getContext('2d');
+          
+          // Fondo azul oscuro
           ctx.fillStyle = '#003366';
-          ctx.fillRect(0, 0, 380, 90);
+          ctx.fillRect(0, 0, 380, 70);
+          
+          // Mensaje principal
           ctx.fillStyle = '#ffffff';
           ctx.font = 'bold 16px Arial';
-          ctx.fillText('Datos procesados correctamente', 20, 38);
-          ctx.fillStyle = '#aac4e8';
-          ctx.font = '13px Arial';
-          ctx.fillText('Servidor: Express 4.21.1  |  Puerto 8080', 20, 65);
+          ctx.fillText('Datos procesados con éxito', 20, 40);
         })();
       </script>
     </section>
@@ -166,9 +168,9 @@ Boleta:     ${boleta}</pre>
 </body>
 </html>`;
 
-    response.send(html);
+  response.send(html);
 });
 
 app.listen(puerto, () => {
-    console.log(`Servidor corriendo en http://localhost:${puerto}`);
+  console.log(`Servidor corriendo en http://localhost:${puerto}`);
 });

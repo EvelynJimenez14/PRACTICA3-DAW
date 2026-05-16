@@ -72,7 +72,7 @@ class Aplicacion extends React.Component {
         <div className="card">
           <h2>Informacion de la Practica (pre)</h2>
           <pre className="info-pre">
-{`Grupo:    4AM2
+            {`Grupo:    4AM2
 Practica: 3 - Aplicacion Web Multimedia
 Materia:  Desarrollo de Aplicaciones Web
 Escuela:  ESCOM - IPN`}
@@ -81,24 +81,23 @@ Escuela:  ESCOM - IPN`}
 
         {/* UL */}
         <div className="card">
-          <h2>Tecnologias Utilizadas (ul)</h2>
+          <h2>Calendario de Mayo</h2>
           <ul>
-            <li>React 19 con Babel (ECMAScript 6 a ES5)</li>
-            <li>Webpack 5 con HtmlWebpackPlugin</li>
-            <li>Node.js con Express 4.21.1</li>
-            <li>MySQL 8.3.0 con Sequelize ORM</li>
-            <li>Bootstrap 5 y CSS3</li>
+            <li>10 de Mayo: Día de las Madres</li>
+            <li>15 de Mayo: Día del Maestro</li>
+            <li>21 de Mayo: Día del Politécnico</li>
+            <li>23 de Mayo: Día del Estudiante</li>
           </ul>
         </div>
 
         {/* OL */}
         <div className="card">
-          <h2>Flujo de la Aplicacion (ol)</h2>
+          <h2>Valores institucionales (ol)</h2>
           <ol>
-            <li>El usuario llena el formulario en el Front-End (React).</li>
-            <li>Al dar Submit, los datos viajan via GET a /Action.</li>
-            <li>El servidor Express recibe y parsea los parametros.</li>
-            <li>El servidor genera y retorna una pagina HTML completa y dinamica.</li>
+            <li>Transparencia.</li>
+            <li>Responsabilidad social.</li>
+            <li>Integridad.</li>
+            <li>Innovación y emprendimiento.</li>
           </ol>
         </div>
 
