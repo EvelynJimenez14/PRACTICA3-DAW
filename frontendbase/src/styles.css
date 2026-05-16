@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 10px 20px 30px;
+  background: #fff;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.app-title {
+  color: #003366;
+  border-bottom: 2px solid #003366;
+  padding-bottom: 8px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 14px 18px;
+  margin-bottom: 18px;
+  background: #fff;
+}
+
+.card h2 {
+  color: #003366;
+  margin-top: 0;
+  font-size: 1.05rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 12px;
+}
+
+.team-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.team-table th {
+  background: #003366;
+  color: #fff;
+  padding: 7px 11px;
+  text-align: left;
+  border: 1px solid #003366;
+}
+
+.team-table td {
+  border: 1px solid #aaa;
+  padding: 6px 11px;
+}
+
+.team-table tbody tr:nth-child(even) td {
+  background: #eef2f7;
+}
+
+.info-pre {
+  background: #f5f5f5;
+  border: 1px solid #ccc;
+  color: #000;
+  padding: 12px 16px;
+  font-size: 13px;
+  overflow-x: auto;
+  margin: 0;
+}
+
+ul, ol {
+  line-height: 1.9;
+  padding-left: 22px;
+}
+
+.logo-img {
+  border: 1px solid #aaa;
+  padding: 4px;
+  background: #fff;
+}
+
+.login-form .field {
+  margin-bottom: 10px;
+}
+
+.login-form label {
+  display: inline-block;
+  width: 165px;
+  font-weight: bold;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  padding: 5px 8px;
+  border: 1px solid #999;
+  width: 220px;
+  font-size: 14px;
+}
+
+.submit-btn {
+  background: #003366;
+  color: #fff;
+  border: 1px solid #002244;
+  padding: 8px 26px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.submit-btn:hover {
+  background: #004488;
+}
